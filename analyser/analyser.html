@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>HackStreet Finance</title>
+      <link rel="shortcut icon" href="../assets/logo.png">
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1.0">
+      <link rel="stylesheet" href="../assets/style.css">
+      <link rel="stylesheet" href="../assets/fa/fontawsome5.min.css">
+   </head>
+   <body>
+      <nav>
+         <div class="menu">
+            <div class="logo">
+               <span class="header"><img src="../assets/logo.png"  width="50" height="45">ACKSTREET</span>
+            </div>
+            <ul>
+               <li><a href="./tracker/index.html"><i class="far fa-file-chart-line"></i> &nbsp;&nbsp;Tracker</a></li>
+               <li><a href="#"><i class="far fa-analytics"></i> &nbsp;&nbsp;Analyser</a></li>
+               <li><a href="./investing/index.html"><i class="far fa-chart-line"></i> &nbsp;&nbsp;Investing</a></li>
+               <li><a href="./forum/index.html"><i class="far fa-book"></i> &nbsp;&nbsp;Forum</a></li>
+               <li><a href="#"><i class="fas fa-crown"></i> &nbsp;&nbsp;Premium</a></li>
+            </ul>
+            <a href="./login/index.html" class="getstartedBTN"><i class="far fa-sign-in"></i> &nbsp;&nbsp;Login</a>
+         </div>
+      </nav>
+<br><br><br>
+     <center> <h1>Analyser</h1> <div class="chart-container" style="position: relative; height:400px; width:800px">
+      <canvas id="myChart"></canvas>
+   </div></center><br><br><br>
+      <script type="text/javascript" src="Chart.js"></script>
+      <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
+      <script>
+         var ctx = document.getElementById("myChart").getContext('2d');
+         $(document).ready(function(){ //loads the data on pageload
+            
+            // Get the JSON Data
+            $.getJSON('data.php', function(data) {
+            
+               var options = { responsive: true, 
+                  maintainAspectRatio: false 
+               };
+            
+               var myChart = new Chart(ctx, {
+                  type: 'scatter',
+                  data: {
+                     datasets: [{
+                        label: 'Balance',
+                        data: data,
+                        borderColor: '#2196f3',  
+                        backgroundColor: '#2196f3' 
+                     }] 
+                     },
+                  
+                  options: options 
+               });
+               
+   
+            });
+         });
+      </script>
+   <footer>
+      <div class="content">
+         <div class="left box">
+            <div class="upper">
+               <div class="topic">About us</div>
+               <p>Hackstreet Finance aims at providing realistic solutions on how to manage, control and cut off extra expenses while efficiently keeping track of your budget.</p>
+            </div>
+            <div class="lower">
+               <div class="topic">Contact us</div>
+               <div class="phone">
+                  <a href="#"><i class="far fa-phone-alt"></i> &nbsp;&nbsp;+91 9361833986</a>
+               </div>
+            </div>
+         </div>
+         <div class="middle box">
+            <div class="topic">Our Services</div>
+            <div><a href="#">Analyser</a></div>
+            <div><a href="../tracker/index.html">Tracker</a></div>
+         </div>
+         <div class="right box">
+            <div class="topic">Subscribe us</div>
+            <form action="#">
+               <input type="text" placeholder="Enter email address">
+               <input type="submit" name="" value="Subscribe">
+               <div class="media-icons">
+                  <a href="https://www.facebook.com"><i class="fab fa-facebook-f"></i></a>
+                  <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+                  <a href="https://www.twitter.com"><i class="fab fa-twitter"></i></a>
+                  <a href="https://www.youtube.com"><i class="fab fa-youtube"></i></a>
+                  <a href="https://www.linkedin.com"><i class="fab fa-linkedin-in"></i></a>
+               </div>
+            </form>
+         </div>
+      
+      
+   </div>
+   <center><span style="color: white;">Copyright © 2022 <a href="#" style="color: #eb2f06;">HackStreet</a> All rights reserved.</span></center>
+   </footer>
+</html>
