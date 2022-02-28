@@ -1,0 +1,97 @@
+<!DOCTYPE html>  
+<html>
+  <head>
+    <link rel="shortcut icon" href="../assets/logo.png">
+    <link rel="stylesheet" href="../assets/Premium.css">
+<link rel="stylesheet" href="../assets/fa/fontawsome5.min.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Month', 'Income', 'Expenses'],
+          ['Jan',  1000,      400],
+          ['Feb',  1170,      460],
+          ['Mar',  660,       112],
+          ['Apr',  1030,      540],
+          ['May',  2000,      800],
+          ['Jun',  1500,      700],
+          ['Jul',  1250,      900],
+          ['Aug',  4000,      1500],
+          ['Sep',  3500,      1900],
+          ['Oct',  2750,      600],
+          ['Nov',  1850,      1200],
+          ['Dec',  4020,      2500]
+        ]);
+
+        var options = {
+          title: 'HackStreet Analyser',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+      <nav>
+         <div class="menu">
+            <div class="logo">
+                <span class="header"><a href="../index.html"><img src="../assets/logo.png"  width="50" height="45">ACKSTREET</a></span>
+            </div>
+            <ul>
+               <li><a href="../tracker/index.html"><i class="far fa-file-chart-line"></i> &nbsp;&nbsp;Tracker</a></li>
+               <li><a href="../analyser/analyser.html"><i class="far fa-analytics"></i> &nbsp;&nbsp;Analyser</a></li>
+               <li><a href="../investing/index.html"><i class="far fa-chart-line"></i> &nbsp;&nbsp;Investing</a></li>
+               <li><a href="../forum/index.html"><i class="far fa-book"></i> &nbsp;&nbsp;Forum</a></li>
+            <li><a href="../premium/index.html"><i class="fas fa-crown"></i> &nbsp;&nbsp;Premium</a></li>
+            </ul>
+            <a href="../login/index.html" class="getstartedBTN" target="blank"><i class="far fa-sign-in"></i> &nbsp;&nbsp;Login</a>
+         </div>
+      </nav>
+      <center><div id="curve_chart" style="width: 1500px; height: 500px"></div></center>
+      <footer>
+         <div class="content">
+            <div class="left box">
+               <div class="upper">
+                  <div class="topic">About us</div>
+                  <p>Hackstreet Finance aims at providing realistic solutions on how to manage, control and cut off extra expenses while efficiently keeping track of your budget.</p>
+               </div>
+               <div class="lower">
+                  <div class="topic">Contact us</div>
+                  <div class="phone">
+                     <a><i class="far fa-phone-alt"></i> &nbsp;&nbsp;+91 9361833986</a>
+                  </div>
+               </div>
+            </div>
+            <div class="middle box">
+               <div class="topic">Our Services</div>
+               <div><a href="../analyser/analyser.html">Analyser</a></div>
+               <div><a href="../tracker/index.html">Tracker</a></div>
+            </div>
+            <div class="right box">
+               <div class="topic">Subscribe us</div>
+               <form action="#">
+                  <input type="text" placeholder="Enter email address">
+                  <input type="submit" name="" value="Subscribe">
+                  <div class="media-icons">
+                     <a href="https://www.facebook.com"><i class="fab fa-facebook-f"></i></a>
+                     <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+                     <a href="https://www.twitter.com"><i class="fab fa-twitter"></i></a>
+                     <a href="https://www.youtube.com"><i class="fab fa-youtube"></i></a>
+                     <a href="https://www.linkedin.com"><i class="fab fa-linkedin-in"></i></a>
+                  </div>
+               </form>
+            </div>
+         </div>
+         <div class="bottom">
+            <p>Copyright © 2020 <a href="../index.html">HackStreet</a> All rights reserved</p>
+         </div>
+      </footer>
+      </body>
+</html>

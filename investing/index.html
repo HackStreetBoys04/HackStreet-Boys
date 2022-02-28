@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>HackStreet Finance</title>
+      <link rel="shortcut icon" href="../assets/logo.png">
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1.0">
+      <link rel="stylesheet" href="../assets/style.css">
+      <link rel="stylesheet" href="../assets/fa/fontawsome5.min.css"> 
+   </head>
+   <body>
+      <nav>
+         <div class="menu">
+            <div class="logo">
+                <span class="header"><a href="../index.html"><img src="../assets/logo.png"  width="50" height="45">ACKSTREET</a></span>
+            </div>
+            <ul>
+               <li><a href="../tracker/index.html"><i class="far fa-file-chart-line"></i> &nbsp;&nbsp;Tracker</a></li>
+               <li><a href="../analyser/analyser.html"><i class="far fa-analytics"></i> &nbsp;&nbsp;Analyser</a></li>
+               <li><a href="../investing/index.html"><i class="far fa-chart-line"></i> &nbsp;&nbsp;Investing</a></li>
+               <li><a href="../forum/index.html"><i class="far fa-book"></i> &nbsp;&nbsp;Forum</a></li>
+               <li><a href="../premium/index.html"><i class="fas fa-crown"></i> &nbsp;&nbsp;Premium</a></li>
+            </ul>
+            <a href="../login/index.html" class="getstartedBTN"target="blank"><i class="far fa-sign-in"></i> &nbsp;&nbsp;Login</a>
+         </div>
+      </nav>
+      <div class="img">
+         <style>
+             body {
+  background: linear-gradient(to bottom, #000000 39%, #ffffff 129%);
+             }
+            * {
+            margin: 0;
+            padding: 0;
+            outline: 0;
+            box-sizing: border-box;
+            }
+            .img, .mediumwidgetembed, .tv-widget-chart__container {background-color: black !important;}
+            input,
+            textarea,
+            button,
+            select, img, span,
+            a {
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+            outline: 0;
+            }
+            #tv-medium-widget-8a25c{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            align-items: center;
+ 
+            }
+            .test{color: white;
+             font-size: 50px;}
+         </style>
+         <br>
+         <p>&nbsp;</p>
+         <p>&nbsp;</p>
+         <center>
+            <h1 class="test">RECOMMENDED STOCKS</h1>
+         </center>
+         <br>
+         <p>&nbsp;</p>
+         <div id="tv-medium-widget-8a25c"></div>
+         <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+         <script type="text/javascript">
+            new TradingView.MediumWidget({
+              "container_id": "tv-medium-widget-8a25c",
+              "symbols": [
+                [
+                  "Apple",
+                  "NASDAQ:AAPL|1y"
+                ],
+                [
+                  "Google",
+                  "NASDAQ:GOOG|1y"
+                ],
+                [
+                  "Microsoft",
+                  "NASDAQ:MSFT|1y"
+                ],
+                [
+                  "Tesla",
+                  "NASDAQ:TSLA|1y"
+                ],
+                [
+                  "Facebook",
+                  "NASDAQ:FB|1y"
+                ],
+                [
+                  "Samsung",
+                  "OTC:SSNLF|1y"
+                ]
+              ],
+              "greyText": "Quotes by",
+              "gridLineColor": "#e9e9ea",
+              "fontColor": "#83888D",
+              "underLineColor": "#dbeffb",
+              "trendLineColor": "#4bafe9",
+              "width": "1000px",
+              "height": "500px",
+              "locale": "en",
+              "colorTheme": "dark",
+            });
+         </script>
+      </div>
+      <footer>
+         <div class="content">
+            <div class="left box">
+               <div class="upper">
+                  <div class="topic">About us</div>
+                  <p>Hackstreet Finance aims at providing realistic solutions on how to manage, control and cut off extra expenses while efficiently keeping track of your budget.</p>
+               </div>
+               <div class="lower">
+                  <div class="topic">Contact us</div>
+                  <div class="phone">
+                     <a><i class="fas fa-phone-volume"></i>+91 9361833986</a>
+                  </div>
+               </div>
+            </div>
+            <div class="middle box">
+               <div class="topic">Our Services</div>
+               <div><a href="../analyser/analyser.html">Analyser</a></div>
+               <div><a href="../tracker/index.html">Tracker</a></div>
+            </div>
+            <div class="right box">
+               <div class="topic">Subscribe us</div>
+               <form action="#">
+                  <input type="text" placeholder="Enter email address">
+                  <input type="submit" name="" value="Subscribe">
+                  <div class="media-icons">
+                     <a href="https://www.facebook.com"><i class="fab fa-facebook-f"></i></a>
+                     <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+                     <a href="https://www.twitter.com"><i class="fab fa-twitter"></i></a>
+                     <a href="https://www.youtube.com"><i class="fab fa-youtube"></i></a>
+                     <a href="https://www.linkedin.com"><i class="fab fa-linkedin-in"></i></a>
+                  </div>
+               </form>
+            </div>
+         </div>
+         <div class="bottom">
+            <p>Copyright © 2020 <a href="../index.html">HackStreet</a> All rights reserved</p>
+         </div>
+      </footer>
+   </body>
+</html>
